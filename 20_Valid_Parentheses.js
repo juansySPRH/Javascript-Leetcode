@@ -5,7 +5,7 @@
 // Open brackets must be closed by the same type of brackets.
 // Open brackets must be closed in the correct order.
 // Every close bracket has a corresponding open bracket of the same type.
- 
+
 
 // Example 1:
 
@@ -22,19 +22,19 @@
 
 
 var isValid = function(s) {
-    const par = {
-        '{':'}',
-        '[':']',
-        '(':')'
-    }
-    var result = []
+  const par = {
+    '{': '}',
+    '[': ']',
+    '(': ')'
+  }
+  var result = []
 
-    for (char of s){
-        if (char in par){
-            result.push(char)
-        }else if (par[result.pop()] != char){
-            return false
-        }
+  for (char of s) {
+    if (char in par) {
+      result.push(char)
+    } else if (par[result.pop()] != char) {
+      return false
     }
-    return result.length === 0
+  }
+  return result.length === 0
 };

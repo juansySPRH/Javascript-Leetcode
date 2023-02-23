@@ -4,7 +4,7 @@
 // substring
 //  consisting of non-space characters only.
 
- 
+
 
 // Example 1:
 
@@ -23,8 +23,8 @@
 // Explanation: The last word is "joyboy" with length 6.
 
 var lengthOfLastWord = function(s) {
-    var k = s.split(' ')
-    var k = k.filter(item => item != '')
-    
-    return k[k.length-1].length
+  var k = s.split(' ')
+  var k = k.filter(item => item != '')
+
+  return k[k.length - 1].length
 };

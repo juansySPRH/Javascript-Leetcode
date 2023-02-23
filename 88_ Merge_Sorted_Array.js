@@ -32,16 +32,16 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function(nums1, m, nums2, n) {
-    var tot = m + n
-    var count = 0
-    for (let i = tot-1; i >= 0; i--){
-        if (n > 0){
-            if (nums1[i] == 0) {
-                nums1[i] = nums2[count]
-                count++
-                n--
-            }
-        }
+  var tot = m + n
+  var count = 0
+  for (let i = tot - 1; i >= 0; i--) {
+    if (n > 0) {
+      if (nums1[i] == 0) {
+        nums1[i] = nums2[count]
+        count++
+        n--
+      }
     }
-    return nums1.sort(function(a,b){return a - b})
+  }
+  return nums1.sort(function(a, b) { return a - b })
 };

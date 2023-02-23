@@ -16,20 +16,20 @@
 // Output: 4
 
 var searchInsert = function(nums, target) {
-    var s;
-    var k = 0
-    var i = 1
-    nums.unshift(target)
-    while (i<nums.length){
-        if(nums[k] > nums[i]){
-            s = nums[i]
-            nums[i] = nums[k]
-            nums[k] = s
-            k++
-            i++
-        }else i++
-    }
+  var s;
+  var k = 0
+  var i = 1
+  nums.unshift(target)
+  while (i < nums.length) {
+    if (nums[k] > nums[i]) {
+      s = nums[i]
+      nums[i] = nums[k]
+      nums[k] = s
+      k++
+      i++
+    } else i++
+  }
 
-    return k
+  return k
 
 };

@@ -20,14 +20,14 @@
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
 var removeDuplicates = function(nums) {
-    var i = 1
-    var k = 0
- 
-    while (i < nums.length){
-        if (nums[k] != nums[i]){
-            k+=1
-            nums[k] = nums[i]
-        }else i++
-    }
-    return k + 1
+  var i = 1
+  var k = 0
+
+  while (i < nums.length) {
+    if (nums[k] != nums[i]) {
+      k += 1
+      nums[k] = nums[i]
+    } else i++
+  }
+  return k + 1
 };

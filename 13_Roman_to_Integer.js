@@ -35,34 +35,34 @@
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 var romanToInt = function(s) {
-    var roman = {
-        "M" : 1000,
-        "CM" : 900,
-        "D" : 500,
-        "CD" : 400,
-        "C" : 100,
-        "XC" : 90,
-        "L" : 50,
-        "XL" : 40,
-        "X" : 10,
-        "IX": 9,
-        "V" : 5,
-        "IV" : 4,
-        "I" : 1
+  var roman = {
+    "M": 1000,
+    "CM": 900,
+    "D": 500,
+    "CD": 400,
+    "C": 100,
+    "XC": 90,
+    "L": 50,
+    "XL": 40,
+    "X": 10,
+    "IX": 9,
+    "V": 5,
+    "IV": 4,
+    "I": 1
+  }
+  var result = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    let cur = roman[s[i]]
+    let next = roman[s[i + 1]]
+
+
+    if (cur < next) {
+      result += next - cur
+      i++
+    } else {
+      result += cur
     }
-    var result = 0;
-    
-    for (let i = 0; i < s.length; i++) {
-        let cur = roman[s[i]]
-        let next = roman[s[i + 1]]
-        
-        
-        if (cur < next){
-            result += next - cur
-            i++
-        }else {
-            result += cur
-        }
-    }
-    return result
+  }
+  return result
 };

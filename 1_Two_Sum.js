@@ -18,15 +18,15 @@
 
 
 var twoSum = function(nums, target) {
-    const map = {}
+  const map = {}
 
-    for (let i = 0 ; i < nums.length; i++){
-        const index = nums[i]
-        const complement = target - index
+  for (let i = 0; i < nums.length; i++) {
+    const index = nums[i]
+    const complement = target - index
 
-        if (map[complement] !== undefined) return [map[complement], i]
+    if (map[complement] !== undefined) return [map[complement], i]
 
-        else{ map[index] = i }
-    }
-    return []
+    else { map[index] = i }
+  }
+  return []
 };

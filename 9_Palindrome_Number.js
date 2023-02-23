@@ -20,10 +20,10 @@
 
 
 var isPalindrome = function(x) {
-    // if x is negative automatic not palindrome 
-    if (x < 0 ){
-        return false
-    }
-    // 11 ==    '11' -> [1 1] -> reverse [1 1] -> 11
-    return x == x.toString().split('').reverse().join('')
+  // if x is negative automatic not palindrome 
+  if (x < 0) {
+    return false
+  }
+  // 11 ==    '11' -> [1 1] -> reverse [1 1] -> 11
+  return x == x.toString().split('').reverse().join('')
 };

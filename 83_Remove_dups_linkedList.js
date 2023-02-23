@@ -15,22 +15,22 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
-    var h = head
-    var s = new Set()
-    var p ;
+  var h = head
+  var s = new Set()
+  var p;
 
-    while (head){
-        if (s.has(head.val)){
-            p.next = head.next
-            head = head.next
-        }else{
-            s.add(head.val)
-            p = head
-            head = head.next
-        }
+  while (head) {
+    if (s.has(head.val)) {
+      p.next = head.next
+      head = head.next
+    } else {
+      s.add(head.val)
+      p = head
+      head = head.next
     }
-    return h
-    
+  }
+  return h
+
 
 };
 // [1, 1, 2, 3 , 3]

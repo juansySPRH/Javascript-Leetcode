@@ -2,7 +2,7 @@
 
 // If there is no common prefix, return an empty string "".
 
- 
+
 
 // Example 1:
 
@@ -15,13 +15,13 @@
 // Explanation: There is no common prefix among the input strings.
 
 var longestCommonPrefix = function(arr) {
-    let count = 1
-    let starts = arr[0]
+  let count = 1
+  let starts = arr[0]
 
-    while (count < arr.length){
-        if (!arr[count].startsWith(starts)){
-            starts = starts.slice(0, -1)
-        }else count++
-    }
-    return starts
+  while (count < arr.length) {
+    if (!arr[count].startsWith(starts)) {
+      starts = starts.slice(0, -1)
+    } else count++
+  }
+  return starts
 };

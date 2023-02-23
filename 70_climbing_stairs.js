@@ -2,7 +2,7 @@
 
 // Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
- 
+
 
 // Example 1:
 
@@ -22,13 +22,13 @@
 
 
 const fib = (value) => {
-    var cur = 0, nex = 1, next;
-    for(let i = -1; i<=value; i++){
-        if (i != value) {
-            next = cur + nex
-            cur = nex
-            nex = next
-        } else if (i == value) return cur
-    }
+  var cur = 0, nex = 1, next;
+  for (let i = -1; i <= value; i++) {
+    if (i != value) {
+      next = cur + nex
+      cur = nex
+      nex = next
+    } else if (i == value) return cur
+  }
 }
 console.log(fib(7))
